@@ -21,7 +21,7 @@ const urlsBucket = {
 	other: [],
 };
 
-const urlRegex = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+const urlRegex = /(http(s)?:\/\/)?(www\.)?[-\w@:%.\+~#=]{2,256}\.[a-z]{2,6}\b([-\w@:%\+.~#?&//=]*)/g;
 data.match(urlRegex).forEach((url) => {
 	if (url.includes('youtu.be') || url.includes('youtube')) {
 		urlsBucket.youtube.push(url);
